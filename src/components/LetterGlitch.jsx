@@ -25,8 +25,8 @@ const LetterGlitch = () => {
       canvas.height = window.innerHeight * dpr;
       
       ctx.scale(dpr, dpr);
-      canvas.style.width = `${window.innerWidth}px`;
-      canvas.style.height = `${window.innerHeight}px`;
+      canvas.style.width = '100%';
+      canvas.style.height = '100%';
 
       columns = Math.ceil(window.innerWidth / fontSize);
       rows = Math.ceil(window.innerHeight / fontSize);
