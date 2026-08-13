@@ -1,0 +1,60 @@
+.click-spark-container {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+.click-spark-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan);
+  animation: spark-fly 0.6s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+[data-theme="light"] .click-spark-particle {
+  background: var(--cyan);
+  box-shadow: 0 0 10px rgba(217,119,87,0.5);
+}
+
+.click-spark-ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border: 2px solid var(--cyan);
+  opacity: 1;
+  animation: spark-ripple 0.6s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes spark-fly {
+  0% { 
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translate(-50%, -50%) rotate(var(--angle)) translateY(-40px) scale(0);
+    opacity: 0; 
+  }
+}
+
+@keyframes spark-ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+}

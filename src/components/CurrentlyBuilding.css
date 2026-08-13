@@ -1,0 +1,212 @@
+.lab {
+  padding: var(--section-padding) 0;
+  position: relative;
+  z-index: 2;
+}
+
+.lab-header { margin-bottom: 48px; }
+
+.lab-sub {
+  font-size: 1rem;
+  color: var(--white-40);
+  margin-top: 16px;
+}
+
+/* Main card */
+.lab-main-card {
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.lab-main-glow {
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,229,255,0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Status */
+.lab-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: #10b981;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.2);
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.lab-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulse 1.5s ease infinite;
+}
+
+.lab-main-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+  max-width: 600px;
+  background: linear-gradient(135deg, var(--white) 0%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Progress */
+.lab-progress-wrap {
+  max-width: 500px;
+  margin-bottom: 32px;
+}
+
+.lab-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--white-40);
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.lab-progress-pct {
+  font-weight: 700;
+}
+
+.lab-progress-track {
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  position: relative;
+  overflow: visible;
+}
+
+.lab-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(0,229,255,0.4);
+}
+
+.lab-progress-glow {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 16px var(--cyan);
+}
+
+/* Data stream */
+.lab-datastream {
+  position: absolute;
+  right: 48px;
+  top: 48px;
+  bottom: 48px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+.lab-stream-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  border-radius: 2px;
+  animation: stream 1.5s linear infinite;
+}
+
+@keyframes stream {
+  from { transform: translateX(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  to { transform: translateX(200%); opacity: 0; }
+}
+
+.lab-tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Exploring */
+.lab-exploring {
+  margin-top: 16px;
+}
+
+.lab-exploring-title {
+  font-size: 0.68rem;
+  color: var(--cyan);
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.lab-explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.lab-explore-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  transition: all 0.25s var(--ease-smooth);
+  cursor: default;
+}
+
+.lab-explore-item:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(0,229,255,0.2);
+  transform: translateY(-2px);
+}
+
+.lab-explore-num {
+  font-size: 0.65rem;
+  color: var(--cyan);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.lab-explore-text {
+  font-size: 0.88rem;
+  color: var(--white-70);
+  flex: 1;
+}
+
+.lab-explore-arrow {
+  font-size: 0.8rem;
+  color: var(--cyan);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.lab-explore-item:hover .lab-explore-arrow {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .lab-main-card { padding: 28px; }
+  .lab-datastream { display: none; }
+}

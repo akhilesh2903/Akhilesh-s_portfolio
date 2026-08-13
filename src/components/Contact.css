@@ -1,0 +1,131 @@
+.contact {
+  padding: var(--section-padding) 0;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Background */
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contact-bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.contact-bg-glow--1 {
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(0,229,255,0.07) 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.contact-bg-glow--2 {
+  width: 500px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(124,58,237,0.07) 0%, transparent 70%);
+  bottom: -50px;
+  right: -50px;
+}
+
+.contact-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Inner */
+.contact-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.contact-eyebrow {
+  justify-content: center;
+}
+
+.contact-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.contact-bio {
+  font-size: 1rem;
+  color: var(--white-40);
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+/* Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+  border-radius: 14px;
+}
+
+.contact-info-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+
+.contact-info-label {
+  font-size: 0.65rem;
+  color: var(--cyan);
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.contact-info-value {
+  font-size: 0.95rem;
+  color: var(--white-70);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-info-value:hover {
+  color: var(--cyan);
+}
+
+/* CTA */
+.contact-cta-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-cta {
+  font-size: 1rem;
+  padding: 18px 44px;
+  gap: 14px;
+}
+
+@media (max-width: 768px) {
+  .contact-title { font-size: 2.5rem; }
+  .contact-cta { width: 100%; justify-content: center; }
+}

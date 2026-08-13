@@ -1,0 +1,121 @@
+.footer {
+  position: relative;
+  padding: 60px 0 32px;
+  z-index: 2;
+}
+
+.footer-top-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  margin-bottom: 60px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Left */
+.footer-name {
+  font-family: var(--font-sans);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  color: var(--white-40);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.footer-avail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  color: #10b981;
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.2);
+  padding: 6px 14px;
+  border-radius: 50px;
+}
+
+.footer-avail-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  animation: pulse 2s ease infinite;
+}
+
+/* Right */
+.footer-right {
+  text-align: right;
+}
+
+.footer-social-label {
+  font-size: 0.62rem;
+  color: var(--white-20);
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--white-40);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-social-link:hover {
+  color: var(--white);
+}
+
+/* Bottom */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.footer-copy {
+  font-size: 0.72rem;
+  color: var(--white-20);
+  letter-spacing: 0.05em;
+}
+
+.footer-divider {
+  color: var(--white-10);
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+  }
+  .footer-right {
+    text-align: left;
+  }
+  .footer-socials { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+}

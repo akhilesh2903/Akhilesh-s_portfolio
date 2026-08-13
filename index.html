@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Akhilesh Bhat — Engineering student, full-stack developer, AI and deep learning enthusiast building modern digital experiences and intelligent applications." />
+    <meta name="keywords" content="Akhilesh Bhat, Full-Stack Developer, AI, Deep Learning, React, Portfolio, Engineer" />
+    <meta name="author" content="Akhilesh Bhat" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Akhilesh Bhat | Full-Stack Developer & AI Enthusiast" />
+    <meta property="og:description" content="Engineering student, full-stack developer, AI and deep learning enthusiast building modern digital experiences." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://akhileshbhat.dev" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Akhilesh Bhat | Full-Stack Developer & AI Enthusiast" />
+    <meta name="twitter:description" content="Engineering student, full-stack developer, AI and deep learning enthusiast." />
+    <title>Akhilesh Bhat | Full-Stack Developer & AI Enthusiast</title>
+    <style>
+      /* Critical inlining to prevent FOUC */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { background: #020205; color: #fff; overflow: hidden; }
+      html[data-theme="light"] body { background: #faf7f2; color: #2b1f1a; }
+    </style>
+    <script>
+      (function() {
+        var savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme) {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

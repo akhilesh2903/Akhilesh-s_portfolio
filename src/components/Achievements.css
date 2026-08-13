@@ -1,0 +1,190 @@
+.achievements {
+  padding: var(--section-padding) 0;
+  position: relative;
+  z-index: 2;
+}
+
+.ach-header { margin-bottom: 60px; }
+
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Cards */
+.ach-card {
+  padding: 36px 28px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s var(--ease-smooth);
+}
+
+.ach-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Glow backgrounds */
+.ach-card-bg {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.5;
+}
+
+.ach-card-bg--udemy { background: radial-gradient(circle, rgba(236,72,153,0.15) 0%, transparent 60%); }
+.ach-card-bg--coursera { background: radial-gradient(circle, rgba(0,183,255,0.12) 0%, transparent 60%); }
+.ach-card-bg--others { background: radial-gradient(circle, rgba(245,158,11,0.10) 0%, transparent 60%); }
+.ach-card-bg--research { background: radial-gradient(circle, rgba(0,229,255,0.12) 0%, transparent 60%); }
+
+.ach-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.ach-count {
+  font-family: var(--font-sans);
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 4px;
+  letter-spacing: -0.04em;
+}
+
+.ach-platform {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.ach-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--white-40);
+  margin-bottom: 6px;
+}
+
+.ach-sub {
+  font-size: 0.78rem;
+  color: var(--white-20);
+}
+
+/* Platforms card */
+.ach-card--platforms {
+  text-align: left;
+}
+
+.ach-platforms-label {
+  font-size: 0.65rem;
+  color: var(--cyan);
+  letter-spacing: 0.15em;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+.ach-platform-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ach-platform-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--white-70);
+}
+
+.ach-platform-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cyan);
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.ach-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ach-area-chip {
+  font-size: 0.65rem;
+  padding: 4px 10px;
+}
+
+/* Research card */
+.ach-card--research {
+  text-align: left;
+  position: relative;
+}
+
+.ach-research-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: #10b981;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.2);
+  padding: 4px 10px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.ach-research-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  animation: pulse 1.5s ease infinite;
+}
+
+.ach-research-title {
+  font-size: 0.8rem;
+  color: var(--white-40);
+  margin-bottom: 4px;
+}
+
+.ach-research-topic {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.ach-research-desc {
+  font-size: 0.82rem;
+  color: var(--white-40);
+  line-height: 1.6;
+}
+
+.ach-research-ring {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  opacity: 0.5;
+}
+
+@media (max-width: 1100px) {
+  .ach-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .ach-grid { grid-template-columns: 1fr; }
+}

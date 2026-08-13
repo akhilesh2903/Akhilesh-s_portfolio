@@ -1,0 +1,43 @@
+.scroll-progress {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.scroll-progress__track {
+  width: 1px;
+  height: 120px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-progress__line {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--cyan), var(--blue));
+  transform-origin: top;
+  transform: scaleY(0);
+  box-shadow: 0 0 8px var(--cyan);
+}
+
+.scroll-progress__dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan), 0 0 20px rgba(0,229,255,0.4);
+  transition: top 0.1s ease;
+  top: 0%;
+}
+
+@media (max-width: 768px) {
+  .scroll-progress { display: none; }
+}
