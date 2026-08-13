@@ -130,7 +130,7 @@ const ProjectCard = ({ project, index }) => {
   return (
     <div
       ref={cardRef}
-      className={`glass-heavy project-card ${project.type === 'featured' ? 'project-card--featured' : ''}`}
+      className={`project-card ${project.type === 'featured' ? 'project-card--featured' : ''}`}
       style={{ transformStyle: 'preserve-3d' }}
       data-cursor="project"
     >
